@@ -10,7 +10,7 @@ function MinimalStyle({ title, description }) {
         height: "100%",
         padding: "0 25px",
         backgroundColor: "#000",
-        border: "5px solid #fff",
+        border: "8px solid #fff",
         color: "#fff",
         padding: "0 35px",
       }}

@@ -1,38 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# URL Images
 
-## Getting Started
+URL Images let's you generate images dynamically based on the provided URL parameters. This is particularly useful for creating custom images for articles, blog posts, or social media content.
 
-First, run the development server:
+![Custom Image](https://url-image.vercel.app/api/cover?t=Image%20From%20URL%20Params&w=700)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+Generated via:
+
+```text
+https://url-image.vercel.app/api/cover?t=Image%20From%20URL%20Params&w=700
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Endpoint
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```text
+https://url-image.vercel.app/api/cover
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Available URL Parameters
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- `t` or `title`: The title text to be included in the image. This is a required parameter.
+- `d` or `desc`: The description text to be included in the image. This is optional.
+- `w` or `width`: The width of the generated image in pixels. Default is `1200`.
+- `h` or `height`: The height of the generated image in pixels. Default is `630`.
+- `s` or `style`: The style to be used for the image. Options include `default`, `minimal`, `uno`, `dos`, and `tres`. If `r` or `random` is used, a style is randomly selected.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## How to Use
 
-## Learn More
+To generate an image, construct a URL using the above parameters. For example:
 
-To learn more about Next.js, take a look at the following resources:
+```text
+https://url-image.vercel.app/api/cover?t=My%20Article%20Title&d=Description%20of%20the%20article&w=800&h=630&s=uno
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This URL will generate an image with the title "My Article Title", a description, the specified dimensions, and using the `uno` style, as shown below.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+![Custom Image](https://url-image.vercel.app/api/cover?t=My%20Article%20Title&d=Description%20of%20the%20article&w=800&h=630&s=uno)
 
-## Deploy on Vercel
+## Available Styles
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `default`: The default style for image generation.
+- `minimal`: A minimalistic style.
+- `uno`: A specific custom style.
+- `dos`: Another specific custom style.
+- `tres`: Yet another custom style.
+- `random`: Randomly selects one of the available styles.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+> Please not that this project is still in progress and contribution guide will be updated momentarily.

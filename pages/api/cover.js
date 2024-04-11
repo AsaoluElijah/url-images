@@ -37,13 +37,13 @@ export default async function handler(request) {
     new URL("../../assets/fonts/Lato-Black.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
-  const fontTypeWriter = await fetch(
-    new URL("../../assets/fonts/Typewriter.ttf", import.meta.url)
-  ).then((res) => res.arrayBuffer());
+  // const fontTypeWriter = await fetch(
+  //   new URL("../../assets/fonts/Typewriter.ttf", import.meta.url)
+  // ).then((res) => res.arrayBuffer());
 
-  const fontNervous = await fetch(
-    new URL("../../assets/fonts/Nervous.ttf", import.meta.url)
-  ).then((res) => res.arrayBuffer());
+  // const fontNervous = await fetch(
+  //   new URL("../../assets/fonts/Nervous.ttf", import.meta.url)
+  // ).then((res) => res.arrayBuffer());
 
   // Style component mapping
   const STYLE_COMPONENTS = {
@@ -75,8 +75,10 @@ export default async function handler(request) {
     height: imageHeight,
     fonts: [
       { name: "Lato-Black", data: fontLatoBlack, style: "normal" },
-      { name: "Typewriter", data: fontTypeWriter, style: "normal" },
-      { name: "Nervous", data: fontNervous, style: "normal" },
+      { name: "Typewriter", data: fontLatoBlack, style: "normal" },
+      { name: "Nervous", data: fontLatoBlack, style: "normal" },
+      // { name: "Typewriter", data: fontTypeWriter, style: "normal" },
+      // { name: "Nervous", data: fontNervous, style: "normal" },
     ],
     emoji: "openmoji",
   });

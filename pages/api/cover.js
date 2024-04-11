@@ -38,7 +38,7 @@ export default async function handler(request) {
   ).then((res) => res.arrayBuffer());
 
   const fontTypeWriter = await fetch(
-    new URL("../../assets/fonts/TYPEWR.ttf", import.meta.url)
+    new URL("../../assets/fonts/Typewriter.ttf", import.meta.url)
   ).then((res) => res.arrayBuffer());
 
   const fontNervous = await fetch(

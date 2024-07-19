@@ -45,4 +45,4 @@ This URL will generate an image with the title "My Article Title", a description
 - `tres`: Yet another custom style.
 - `random`: Randomly selects one of the available styles.
 
-> Please not that this project is still in progress and contribution guide will be updated momentarily.
+> Kindly note that this project is still in progress, and the contribution guide will be updated momentarily.

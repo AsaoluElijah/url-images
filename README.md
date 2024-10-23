@@ -2,15 +2,17 @@
 
 URL Images let's you generate images dynamically based on the provided URL parameters. This is particularly useful for creating custom images for articles, blog posts, or social media content.
 
-![Custom Image](https://url-image.vercel.app/api/cover?t=Image%20From%20URL%20Params&w=700)
-
-Generated via:
+### Example
 
 ```text
 https://url-image.vercel.app/api/cover?t=Image%20From%20URL%20Params&w=700
 ```
+#### Output 👇
+![Custom Image](https://url-image.vercel.app/api/cover?t=Image%20From%20URL%20Params&w=700)
 
-## Endpoint
+____
+
+## Base Endpoint
 
 ```text
 https://url-image.vercel.app/api/cover

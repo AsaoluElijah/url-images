@@ -1,6 +1,5 @@
 import ImageGenerator from "@/utils/ImageGenerator";
 
-
 export const config = {
   runtime: "edge",
 };

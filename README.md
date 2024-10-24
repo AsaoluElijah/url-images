@@ -38,6 +38,23 @@ This URL will generate an image with the title "My Article Title", a description
 
 ![Custom Image](https://url-image.vercel.app/api/cover?t=My%20Article%20Title&d=Description%20of%20the%20article&w=800&h=630&s=uno)
 
+## Title Formatting
+
+The title parameter is used to generate the title of the image. It is required and must be provided. It is used in a verbose manner, whatever you provide will be used as the title. It utilizes standard URL encoding, so you can use spaces, special characters, etc.
+
+The following URL will generate an image with the title "MY ARTICLE TITLE":
+
+```text
+https://url-image.vercel.app/api/cover?t=MY%20ARTICLE%20TITLE&w=700 
+```
+
+
+You can also use a line break in the title by using `%0D` in the URL:
+
+```
+https://url-image.vercel.app/api/cover?t=MY%0DARTICLE%20TITLE&w=700
+```
+
 ## Available Styles
 
 - `default`: The default style for image generation.

@@ -1,7 +1,7 @@
 class FontLoader {
   static async loadFonts() {
     const fontLatoBlack = await fetch(
-      new URL("../../assets/fonts/Lato-Black.ttf", import.meta.url)
+      new URL("@/assets/fonts/Lato-Black.ttf", import.meta.url)
     ).then((res) => res.arrayBuffer());
 
     return [

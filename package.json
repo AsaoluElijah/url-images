@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@typescript-eslint/parser": "8.0.0",
+    "@vercel/og": "^0.6.3",
     "eslint-config-next": "15.0.1",
     "next": "15.0.1",
     "react": "18.3.1",

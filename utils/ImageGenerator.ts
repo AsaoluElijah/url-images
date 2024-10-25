@@ -1,17 +1,21 @@
 import { ImageResponse } from "@vercel/og";
 import StyleComponentFactory from "./StyleComponentFactory";
 import FontLoader from "./FontLoader";
+import { NextRequest } from "next/server";
 
 class ImageGenerator {
-  constructor(request) {
-    const { searchParams } = request.nextUrl;
+  params: { articleTitle: string; articleDesc: string; imageWidth: number; imageHeight: number; style: string; };
+
+  constructor(request: NextRequest) {
+    const url = new URL(request.url);
     this.params = {
-      articleTitle: searchParams.get("t") || searchParams.get("title"),
-      articleDesc: searchParams.get("d") || searchParams.get("desc"),
-      imageWidth: parseInt(searchParams.get("w") || searchParams.get("width"), 10) || 1200,
-      imageHeight: parseInt(searchParams.get("h") || searchParams.get("height"), 10) || 630,
-      style: searchParams.get("s") || searchParams.get("style") || "default",
+      articleTitle: url.searchParams.get("t") || url.searchParams.get("title") || "",
+      articleDesc: url.searchParams.get("d") || url.searchParams.get("desc") || "",
+      imageWidth: parseInt(url.searchParams.get("w") || url.searchParams.get("width") || "1200", 10),
+      imageHeight: parseInt(url.searchParams.get("h") || url.searchParams.get("height") || "630", 10),
+      style: url.searchParams.get("s") || url.searchParams.get("style") || "default",
     };
+    console.log(this.params);
   }
 
   async generateImage() {
@@ -19,7 +23,6 @@ class ImageGenerator {
       return this.generateErrorImage();
     }
 
-    const StyleComponent = StyleComponentFactory.getStyleComponent(this.params.style);
     const content = (
       <StyleComponent title={this.params.articleTitle} description={this.params.articleDesc} />
     );

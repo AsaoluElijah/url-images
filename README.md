@@ -48,7 +48,7 @@ This section outlines the query parameters that can be used with the API route f
 - **Description Parameters**
   - `d` or `desc`: 
     - **Description**: The description of the article.
-    - **Default**: None (required).
+    - **Default**: None (optional).
   - `ds` or `descriptionSize`: 
     - **Description**: The font size of the description.
     - **Type**: Integer (in pixels).

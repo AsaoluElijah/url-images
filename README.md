@@ -22,18 +22,63 @@ https://url-image.vercel.app/api/cover?t=Image%20From%20URL%20Params&w=700
 https://url-image.vercel.app/api/cover
 ```
 
-## Available URL Parameters
+## API Route Parameters Documentation
 
-- `t` or `title`: The title text to be included in the image. This is a required
-  parameter.
-- `d` or `desc`: The description text to be included in the image. This is
-  optional.
-- `w` or `width`: The width of the generated image in pixels. Default is `1200`.
-- `h` or `height`: The height of the generated image in pixels. Default is
-  `630`.
-- `s` or `style`: The style to be used for the image. Options include `default`,
-  `minimal`, `uno`, `dos`, and `tres`. If `r` or `random` is used, a style is
-  randomly selected.
+This section outlines the query parameters that can be used with the API route for generating images.
+
+### Query Parameters
+
+- **Title Parameters**
+  - `t` or `title`: 
+    - **Description**: The title of the article.
+    - **Default**: None (required).
+  - `ts` or `titleSize`: 
+    - **Description**: The font size of the title.
+    - **Type**: Integer (in pixels).
+    - **Default**: `70`.
+  - `tw` or `titleWeight`: 
+    - **Description**: The font weight of the title.
+    - **Type**: String (e.g., "400", "700", "900").
+    - **Default**: `900`.
+  - `tlh` or `titleLineHeight`: 
+    - **Description**: The line height of the title.
+    - **Type**: String (e.g., "1.5", "1.6").
+    - **Default**: `1.6`.
+
+- **Description Parameters**
+  - `d` or `desc`: 
+    - **Description**: The description of the article.
+    - **Default**: None (required).
+  - `ds` or `descriptionSize`: 
+    - **Description**: The font size of the description.
+    - **Type**: Integer (in pixels).
+    - **Default**: `40`.
+  - `dw` or `descriptionWeight`: 
+    - **Description**: The font weight of the description.
+    - **Type**: String (e.g., "400", "700", "900").
+    - **Default**: `900`.
+  - `dlh` or `descriptionLineHeight`: 
+    - **Description**: The line height of the description.
+    - **Type**: String (e.g., "1.5", "1.6").
+    - **Default**: `1.6`.
+
+- **Image Dimensions**
+  - `w` or `width`: 
+    - **Description**: The width of the generated image.
+    - **Type**: Integer (in pixels).
+    - **Default**: `1200`.
+  - `h` or `height`: 
+    - **Description**: The height of the generated image.
+    - **Type**: Integer (in pixels).
+    - **Default**: `630`.
+  - `ar` or `aspectRatio`: 
+    - **Description**: The aspect ratio of the image (e.g., "16:9").
+    - **Default**: None (if provided, it will adjust the height based on the width).
+
+### Usage Example
+
+To generate an image with a specific title and description, you can use the following URL format:
+
 
 ## How to Use
 

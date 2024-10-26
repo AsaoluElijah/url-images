@@ -1,4 +1,4 @@
-function MinimalStyle({ title, description }) {
+function MinimalStyle({ title, description, titleSize, descriptionSize, titleLineHeight }) {
   return (
     <div
       style={{
@@ -17,14 +17,14 @@ function MinimalStyle({ title, description }) {
     >
       <h2
         style={{
-          fontSize: "70px",
+          fontSize: titleSize,
           textDecoration: "underline",
-          lineHeight: 1.7,
+          lineHeight: titleLineHeight,
         }}
       >
         {title}
       </h2>
-      {description && <p style={{ fontSize: "40px" }}>{description}</p>}
+      {description && <p style={{ fontSize: descriptionSize }}>{description}</p>}
     </div>
   );
 }

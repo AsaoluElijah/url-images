@@ -1,4 +1,4 @@
-function Uno({ title, description }) {
+function Uno({ title, description, titleSize, descriptionSize, titleWeight, descriptionWeight, titleLineHeight, descriptionLineHeight }) {
   return (
     <div
       style={{
@@ -17,12 +17,12 @@ function Uno({ title, description }) {
     >
       <h3
         style={{
-          fontSize: 70,
-          fontWeight: 900,
+          fontSize: titleSize,
+          fontWeight: titleWeight,
           background: "#000",
           padding: "25px",
           color: "#fff",
-          lineHeight: 1.6,
+          lineHeight: titleLineHeight,
         }}
       >
         {title}
@@ -30,12 +30,12 @@ function Uno({ title, description }) {
       {description && (
         <p
           style={{
-            fontSize: 40,
-            fontWeight: 900,
+            fontSize: descriptionSize,
+            fontWeight: descriptionWeight,
             background: "#000",
             padding: "25px",
             color: "#fff",
-            lineHeight: 1.6,
+            lineHeight: descriptionLineHeight,
           }}
         >
           {description}

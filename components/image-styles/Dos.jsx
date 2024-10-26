@@ -1,4 +1,4 @@
-function Dos({ title, description }) {
+function Dos({ title, description, titleSize, descriptionSize, titleWeight, descriptionWeight, titleLineHeight, descriptionLineHeight }) {
   return (
     <div
       style={{
@@ -16,12 +16,12 @@ function Dos({ title, description }) {
     >
       <h3
         style={{
-          fontSize: 70,
-          fontWeight: 900,
+          fontSize: titleSize,
+          fontWeight: titleWeight,
           background: "#C53A00",
           padding: "25px",
           color: "#fff",
-          lineHeight: 1.6,
+          lineHeight: titleLineHeight,
         }}
       >
         {title}
@@ -29,13 +29,13 @@ function Dos({ title, description }) {
       {description && (
         <p
           style={{
-            fontSize: 30,
-            fontWeight: 900,
+            fontSize: descriptionSize,
+            fontWeight: descriptionWeight,
             background: "#C53A00",
             padding: "25px",
             border: "5px solid #fff",
             color: "#fff",
-            lineHeight: 1.6,
+            lineHeight: descriptionLineHeight,
             fontFamily: "Lato-Black",
           }}
         >

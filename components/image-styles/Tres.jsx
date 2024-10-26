@@ -1,4 +1,4 @@
-function Tres({ title, description }) {
+function Tres({ title, description, titleSize, descriptionSize, titleWeight, descriptionWeight, titleLineHeight, descriptionLineHeight }) {
   return (
     <div
       style={{
@@ -18,11 +18,11 @@ function Tres({ title, description }) {
     >
       <h3
         style={{
-          fontSize: 70,
-          fontWeight: 900,
+          fontSize: titleSize,
+          fontWeight: titleWeight,
           background: "#671EC4",
           padding: "50px 25px",
-          lineHeight: 1.6,
+          lineHeight: titleLineHeight,
           color: "#FEC6FC",
           border: "8px solid #FEC6FC",
           borderLeft: "none",
@@ -33,10 +33,10 @@ function Tres({ title, description }) {
       {description && (
         <p
           style={{
-            fontSize: 40,
-            fontWeight: 900,
+            fontSize: descriptionSize,
+            fontWeight: descriptionWeight,
             padding: "25px",
-            lineHeight: 1.6,
+            lineHeight: descriptionLineHeight,
           }}
         >
           {description}

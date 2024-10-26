@@ -1,4 +1,4 @@
-function DefaultStyle({ title, description }) {
+function DefaultStyle({ title, description, titleSize, descriptionSize, titleWeight, descriptionWeight, titleLineHeight, descriptionLineHeight }) {
   return (
     <div
       style={{
@@ -17,9 +17,9 @@ function DefaultStyle({ title, description }) {
     >
       <h3
         style={{
-          fontSize: 70,
-          fontWeight: 900,
-          lineHeight: 1.6,
+          fontSize: titleSize,
+          fontWeight: titleWeight,
+          lineHeight: titleLineHeight,
         }}
       >
         {title}
@@ -27,9 +27,9 @@ function DefaultStyle({ title, description }) {
       {description && (
         <p
           style={{
-            fontSize: 40,
-            fontWeight: 900,
-            lineHeight: 1.6,
+            fontSize: descriptionSize,
+            fontWeight: descriptionWeight,
+            lineHeight: descriptionLineHeight,
           }}
         >
           {description}

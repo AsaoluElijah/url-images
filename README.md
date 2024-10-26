@@ -79,14 +79,13 @@ This section outlines the query parameters that can be used with the API route f
 
 To generate an image with a specific title and description, you can use the following URL format:
 
+https://url-images.vercel.app/api/cover?t=Your%20Title&d=Your%20Description&ts=80&ds=50&w=800&h=400
 
 ## How to Use
 
 To generate an image, construct a URL using the above parameters. For example:
 
-```text
 https://url-image.vercel.app/api/cover?t=My%20Article%20Title&d=Description%20of%20the%20article&w=800&h=630&s=uno
-```
 
 This URL will generate an image with the title "My Article Title", a
 description, the specified dimensions, and using the `uno` style, as shown
@@ -103,15 +102,11 @@ special characters, etc.
 
 The following URL will generate an image with the title "MY ARTICLE TITLE":
 
-```text
 https://url-image.vercel.app/api/cover?t=MY%20ARTICLE%20TITLE&w=700
-```
 
 You can also use a line break in the title by using `%0D` in the URL:
 
-```
 https://url-image.vercel.app/api/cover?t=MY%0DARTICLE%20TITLE&w=700
-```
 
 ## Available Styles
 

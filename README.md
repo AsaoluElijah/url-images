@@ -1,16 +1,20 @@
 # URL Images
 
-URL Images let's you generate images dynamically based on the provided URL parameters. This is particularly useful for creating custom images for articles, blog posts, or social media content.
+URL Images let's you generate images dynamically based on the provided URL
+parameters. This is particularly useful for creating custom images for articles,
+blog posts, or social media content.
 
 ### Example
 
 ```text
 https://url-image.vercel.app/api/cover?t=Image%20From%20URL%20Params&w=700
 ```
+
 #### Output 👇
+
 ![Custom Image](https://url-image.vercel.app/api/cover?t=Image%20From%20URL%20Params&w=700)
 
-____
+---
 
 ## Base Endpoint
 
@@ -18,25 +22,91 @@ ____
 https://url-image.vercel.app/api/cover
 ```
 
-## Available URL Parameters
+## API Route Parameters Documentation
 
-- `t` or `title`: The title text to be included in the image. This is a required parameter.
-- `d` or `desc`: The description text to be included in the image. This is optional.
-- `w` or `width`: The width of the generated image in pixels. Default is `1200`.
-- `h` or `height`: The height of the generated image in pixels. Default is `630`.
-- `s` or `style`: The style to be used for the image. Options include `default`, `minimal`, `uno`, `dos`, and `tres`. If `r` or `random` is used, a style is randomly selected.
+This section outlines the query parameters that can be used with the API route for generating images.
+
+### Query Parameters
+
+- **Title Parameters**
+  - `t` or `title`: 
+    - **Description**: The title of the article.
+    - **Default**: None (required).
+  - `ts` or `titleSize`: 
+    - **Description**: The font size of the title.
+    - **Type**: Integer (in pixels).
+    - **Default**: `70`.
+  - `tw` or `titleWeight`: 
+    - **Description**: The font weight of the title.
+    - **Type**: String (e.g., "400", "700", "900").
+    - **Default**: `900`.
+  - `tlh` or `titleLineHeight`: 
+    - **Description**: The line height of the title.
+    - **Type**: String (e.g., "1.5", "1.6").
+    - **Default**: `1.6`.
+
+- **Description Parameters**
+  - `d` or `desc`: 
+    - **Description**: The description of the article.
+    - **Default**: None (optional).
+  - `ds` or `descriptionSize`: 
+    - **Description**: The font size of the description.
+    - **Type**: Integer (in pixels).
+    - **Default**: `40`.
+  - `dw` or `descriptionWeight`: 
+    - **Description**: The font weight of the description.
+    - **Type**: String (e.g., "400", "700", "900").
+    - **Default**: `900`.
+  - `dlh` or `descriptionLineHeight`: 
+    - **Description**: The line height of the description.
+    - **Type**: String (e.g., "1.5", "1.6").
+    - **Default**: `1.6`.
+
+- **Image Dimensions**
+  - `w` or `width`: 
+    - **Description**: The width of the generated image.
+    - **Type**: Integer (in pixels).
+    - **Default**: `1200`.
+  - `h` or `height`: 
+    - **Description**: The height of the generated image.
+    - **Type**: Integer (in pixels).
+    - **Default**: `630`.
+  - `ar` or `aspectRatio`: 
+    - **Description**: The aspect ratio of the image (e.g., "16:9").
+    - **Default**: None (if provided, it will adjust the height based on the width).
+
+### Usage Example
+
+To generate an image with a specific title and description, you can use the following URL format:
+
+https://url-images.vercel.app/api/cover?t=Your%20Title&d=Your%20Description&ts=80&ds=50&w=800&h=400
 
 ## How to Use
 
 To generate an image, construct a URL using the above parameters. For example:
 
-```text
 https://url-image.vercel.app/api/cover?t=My%20Article%20Title&d=Description%20of%20the%20article&w=800&h=630&s=uno
-```
 
-This URL will generate an image with the title "My Article Title", a description, the specified dimensions, and using the `uno` style, as shown below.
+This URL will generate an image with the title "My Article Title", a
+description, the specified dimensions, and using the `uno` style, as shown
+below.
 
 ![Custom Image](https://url-image.vercel.app/api/cover?t=My%20Article%20Title&d=Description%20of%20the%20article&w=800&h=630&s=uno)
+
+## Title Formatting
+
+The title parameter is used to generate the title of the image. It is required
+and must be provided. It is used in a verbose manner, whatever you provide will
+be used as the title. It utilizes standard URL encoding, so you can use spaces,
+special characters, etc.
+
+The following URL will generate an image with the title "MY ARTICLE TITLE":
+
+https://url-image.vercel.app/api/cover?t=MY%20ARTICLE%20TITLE&w=700
+
+You can also use a line break in the title by using `%0D` in the URL:
+
+https://url-image.vercel.app/api/cover?t=MY%0DARTICLE%20TITLE&w=700
 
 ## Available Styles
 
@@ -47,4 +117,5 @@ This URL will generate an image with the title "My Article Title", a description
 - `tres`: Yet another custom style.
 - `random`: Randomly selects one of the available styles.
 
-> Kindly note that this project is still in progress, and the contribution guide will be updated momentarily.
+> Kindly note that this project is still in progress, and the contribution guide
+> will be updated momentarily.
